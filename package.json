@@ -15,6 +15,11 @@
     "format": "prettier --write \"./src/**/*.{js,jsx,json,css,scss,md}\"",
     "test": "jest"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn test --coverage && yarn build"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
