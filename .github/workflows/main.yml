@@ -23,12 +23,16 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install
 
       - name: Build And Test project
         run: yarn build
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v1.9
+        uses: SonarSource/sonarcloud-github-action@master
         env: 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args:
+            -Dsonar.organization=my-projectkey
+            -Dsonar.projectKey=my-projectkey
