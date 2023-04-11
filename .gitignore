@@ -3,11 +3,11 @@
 *.log
 
 # Dependencies
-/node_modules
+node_modules
 
 # Build outputs
-/build
-/coverage
+build
+coverage
 
 # IDEs and editors
-/.vscode
+.vscode
