@@ -31,6 +31,6 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v1.9
         with:
-          organization: 'your-organization'
-          project: 'your-project'
+          organization: 'azyhar'
+          project: 'anton-zyhar'
           token: ${{ secrets.SONAR_TOKEN }}
