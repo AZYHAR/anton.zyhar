@@ -1,2 +1,13 @@
-# dependencies
+# General
+.DS_Store
+*.log
+
+# Dependencies
 /node_modules
+
+# Build outputs
+/build
+/coverage
+
+# IDEs and editors
+/.vscode
