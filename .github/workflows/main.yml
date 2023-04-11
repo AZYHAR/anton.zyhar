@@ -29,10 +29,9 @@ jobs:
         run: yarn build
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env: 
+        uses: SonarSource/sonarcloud-github-action@v1.9
+        env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          args:
-            -Dsonar.organization=my-projectkey
+          args: -Dsonar.organization=my-projectkey
             -Dsonar.projectKey=my-projectkey
