@@ -33,5 +33,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          args: -Dsonar.organization=my-projectkey
-            -Dsonar.projectKey=my-projectkey
+          args: 
+            -Dsonar.organization=azyhar
+            -Dsonar.projectKey=anton.zyhar
+            -Dsonar.branch.name=${{ github.ref }}
