@@ -1,3 +1,5 @@
 [build]
+  base = "/"
   command = "yarn build"
-  node_version = "current"
+  publish = "build/"
+  environment = { NODE_VERSION = "latest" }
