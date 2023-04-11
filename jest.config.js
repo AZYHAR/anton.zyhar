@@ -1,10 +1,10 @@
 module.exports = {
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
   testMatch: ['**/__tests__/**/*.test.js'],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**',
-    '!src/index.js', // exclude entry point file
+    '!src/index.jsx', // exclude entry point file
     '!**/__tests__/**', // exclude test files
     '!**/node_modules/**', // exclude node_modules
   ],

@@ -1,15 +1,14 @@
-test('adds 1 + 2 to equal 3', () => {
-  expect(1 + 2).toBe(1)
-})
+// App.test.js
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(1 + 2).toBe(1)
-})
+import React from 'react'
+import { render } from '@testing-library/react'
+import '@testing-library/jest-dom/extend-expect'
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(1 + 2).toBe(1)
-})
+import { App } from '../App.jsx'
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(1 + 2).toBe(1)
+describe('App component', () => {
+  it('renders the "Hello" text', () => {
+    const { getByText } = render(<App />)
+    expect(getByText('Hello')).toBeInTheDocument()
+  })
 })
