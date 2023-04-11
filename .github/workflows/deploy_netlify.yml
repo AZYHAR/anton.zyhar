@@ -1,0 +1,37 @@
+name: CD
+
+on:
+  # Allows to manually run fomr Actions tab
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start deployment
+        uses: bobheadxi/deployments@v1
+        id: deployment
+        with:
+          env: production
+          step: start
+
+      # ... steps to build your site for deployment
+
+      - name: Deploy to Netlify
+        uses: South-Paw/action-netlify-cli@1.0.1
+        id: netlify
+        with:
+          args: deploy --json --prod --dir './build' --message 'production [${{ github.sha }}]'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+      - name: Finish deployment
+        uses: bobheadxi/deployments@v1
+        if: always()
+        with:
+          env: ${{ steps.deployment.outputs.env }}
+          step: finish
+          status: ${{ job.status }}
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+          env_url: ${{ steps.netlify.outputs.NETLIFY_PROD_URL }}
