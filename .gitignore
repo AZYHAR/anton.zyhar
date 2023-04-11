@@ -8,6 +8,3 @@ node_modules
 # Build outputs
 build
 coverage
-
-# IDEs and editors
-.vscode
