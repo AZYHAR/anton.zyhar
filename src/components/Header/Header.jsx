@@ -2,10 +2,11 @@ import React from 'react'
 
 import './Header.module.css'
 
+import ResumePDF from '../../assets/Anton-Zyhar-Resume.pdf'
+
 export function Header() {
   return (
     <header>
-      <img src="logo.png" alt="Anton Zyhar logo" />
       <nav>
         <a href="/">
           <img src="logo.png" alt="Site logo" />
@@ -24,7 +25,7 @@ export function Header() {
             <a href="#references">Section 4</a>
           </li>
         </ul>
-        <a href="Anton-Zyhar-Resume.pdf" alt="Anton Zyhar Resume">
+        <a href={ResumePDF} alt="Anton Zyhar Resume">
           Resume
         </a>
       </nav>
