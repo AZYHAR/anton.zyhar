@@ -1,5 +1,0 @@
-[build]
-  base = "/"
-  command = "yarn build:prod"
-  publish = "build/"
-  node_version = "current"

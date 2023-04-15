@@ -1,0 +1,28 @@
+/* root constants */
+:root {
+  --pure-white-color: #ffffff;
+
+  /* Spacing 8 pixel system */
+  --pixel-8: 8px;
+  --pixel-16: 16px;
+  --pixel-24: 24px;
+  --pixel-32: 32px;
+  --pixel-40: 40px;
+  --pixel-48: 48px;
+  --pixel-56: 56px;
+
+  /* Screen sizes */
+  --mobile: 768px;
+  --tablet: 1024px;
+}
+
+body {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: var(--tablet)) {
+}
+
+@media only screen and (max-width: var(--mobile)) {
+}

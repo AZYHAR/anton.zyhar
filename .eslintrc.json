@@ -34,11 +34,8 @@
     "max-len": ["error", { "code": 120 }],
     "import/extensions": [
       "error",
-      "ignorePackages",
-      {
-        "js": "always",
-        "jsx": "always"
-      }
+      "always",
+      { "jsx": "always", "js": "never" }
     ],
     "import/order": [
       "error",

@@ -1,10 +1,11 @@
 module.exports = {
   testEnvironment: 'jsdom',
-  testMatch: ['**/__tests__/**/*.test.js'],
+  testMatch: ['<rootDir>/src/**/*.test.js'],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**',
-    '!src/index.jsx', // exclude entry point file
+    '!src/App.jsx', // exclude entry point file
+    '!src/index.js', // exclude entry point file
     '!**/__tests__/**', // exclude test files
     '!**/node_modules/**', // exclude node_modules
   ],
@@ -17,5 +18,9 @@ module.exports = {
       functions: 80,
       lines: 90,
     },
+  },
+  // Mock css files imports to prevent throwing error
+  moduleNameMapper: {
+    '\\.module\\.css$': 'identity-obj-proxy',
   },
 }

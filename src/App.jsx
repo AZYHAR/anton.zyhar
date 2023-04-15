@@ -1,5 +1,15 @@
 import React from 'react'
 
+import { Home } from './pages/Home'
+import { Header } from './components/Header'
+import { Footer } from './components/Footer'
+
 export const App = () => {
-  return <h1>Hello</h1>
+  return (
+    <>
+      <Header />
+      <Home />
+      <Footer />
+    </>
+  )
 }

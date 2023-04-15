@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: var(--pixel-32);
+}
+
+li:last-child {
+  margin-right: 0;
+}
